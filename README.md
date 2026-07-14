@@ -1,17 +1,15 @@
-Low-Latency Trading Systems Framework
+HotPath - Low-Latency Trading Systems Framework
 
 ## Overview
 
-This is my approach for a high-performance, production-grade C++ framework for building ultra-low-latency trading systems, used for quantitative finance and systems programming. My focus was on highly efficient and especially clean code.
-I saw this project as a challenge, trying to push as hard as I can, seeing what I can get done if I give it my all.
+This repository contains a production-grade C++ framework for building ultra-low-latency trading systems, inspired by real-world quantitative finance infrastructure. The project focuses on high performance, modular design, and clean, maintainable code using modern C++ practices. It was built as a challenging systems programming exercise to deepen my understanding of low-latency architectures, performance optimization, and production-quality software engineering
 
 ## Key Features
-
-- 🚀 Sub-microsecond latency processing (blazingly fast IMO)
-- 🔬 Statistical arbitrage strategy
-- 🧊 Lock-free concurrent data structures
-- 📊 Market data simulation (though, only a simulation)
-- 🔍 Detailed performance benchmarking (run them yourself =)!)
+- 🚀 Ultra-low-latency request processing optimized for high-performance execution.
+- 🔬 Statistical arbitrage strategy implementation for quantitative trading.
+- 🧊 Lock-free concurrent data structures to maximize throughput and minimize contention.
+- 📊 Realistic market data simulation for strategy development and testing.
+- 🔍 Comprehensive benchmarking suite for evaluating latency and system performance.
 
 ## Performance Highlights
 
@@ -33,69 +31,75 @@ I saw this project as a challenge, trying to push as hard as I can, seeing what 
 
 ## Technical Architecture
 
-### Components
-- **Market Data Handler**: Real-time market data processing
-- **Strategy Engine**: Advanced signal generation
-- **Execution Engine**: Rapid order execution simulation
-- **Utility Modules**: 
-  - Lock-free queues
-  - Memory pooling
-  - Precise timing mechanisms
+### Core Components
 
-### Key Technologies
+- **Market Data Handler** – Processes streaming market data with an emphasis on low-latency ingestion and efficient event handling.
+- **Strategy Engine** – Generates trading signals using a statistical arbitrage strategy.
+- **Execution Engine** – Simulates order execution with a focus on realistic execution flow and performance.
+- **Core Infrastructure**
+  - Lock-free concurrent queues
+  - Memory pool allocator
+  - High-resolution timing utilities
+  - Performance monitoring and benchmarking tools
+
+### Technologies
+
 - Modern C++20
-- Zero-overhead abstractions
-- Cache-line optimized data structures
+- Zero-cost abstractions
+- Cache-friendly data structures
+- Lock-free concurrency
 - Statistical arbitrage modeling
+
+---
 
 ## Getting Started
 
 ### Prerequisites
-- CMake (3.20+)
-- Modern C++ Compiler (GCC 10+/Clang 10+/MSVC 19.2+)
 
-### Build Instructions
+- CMake 3.20 or later
+- A C++20-compatible compiler
+  - GCC 10+
+  - Clang 10+
+  - MSVC 19.2+
+
+### Build
+
 ```bash
-mkdir build && cd build
+mkdir build
+cd build
 cmake -DCMAKE_BUILD_TYPE=Release ..
-make
+cmake --build .
 ```
 
 ### Run Benchmarks
+
 ```bash
-# From build directory
 ./benchmark/latency_benchmark
 ```
 
-### Run Market Simulator
+### Run the Market Simulator
+
 ```bash
-# From build directory
 ./examples/simulator
 ```
 
-## Performance Philosophy
+---
 
-Each line of code is crafted to minimize computational overhead and maximize throughput. 
+## Design Philosophy
+
+This framework is built with a performance-first mindset. Every component is designed to reduce latency, maximize throughput, and maintain clean, modular, and extensible code suitable for high-performance systems programming.
+
+---
 
 ## Potential Applications
 
 - Algorithmic Trading Platforms
 - Market Making Systems
-- Quantitative Research Infrastructure
-- High-Performance Financial Simulations
-- Anything where you think that speed is key
+- Quantitative Trading Infrastructure
+- Backtesting and Strategy Research
+- Low-Latency Financial Applications
+- Performance-Critical Distributed Systems
 
-## Contributions
-
-Feel free to give me feedback. Furthermore, if you find potential for optimization, I appreciate any feedback!
-
-**Open Source with Attribution**
-
-You are free to:
-- Use the code in personal or commercial projects
-- Modify and adapt the code
-- Share and distribute the code
-
-This project is shared in the spirit of open collaboration and learning. Respect for the original work is the only requirement.
+ 
 
 
